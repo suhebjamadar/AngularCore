@@ -6,10 +6,7 @@
             "taskName": "build",
             "command": "dotnet build",
             "type": "shell",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
+            "group": "build",
             "presentation": {
                 "reveal": "silent"
             },
@@ -19,7 +16,6 @@
             "taskName": "tscbuild",
             "command": "tsc -p tsconfig.json",
             "type": "shell",
-
             "group": "build",
             "presentation": {
                 "reveal": "silent"
@@ -32,6 +28,20 @@
             "command": "dotnet run",
             "type": "shell",
             "group": "none",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$go"
+        },
+        {
+            "taskName": "copy",
+            "command": "gulp copy",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": "tscbuild",
             "presentation": {
                 "reveal": "silent"
             },

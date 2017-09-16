@@ -12,7 +12,7 @@
         "suppressImplicitAnyIndexErrors": true,
         "skipLibCheck": true,
         "skipDefaultLibCheck": true,
-        "watch": true
+        "watch": false
     },
     "compileOnSave": true
 }
