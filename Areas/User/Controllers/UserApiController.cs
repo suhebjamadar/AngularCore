@@ -3,13 +3,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AngularCore.Areas.User.Controllers
 {
-    [Route("api/[controller]")]
+    [Area("User"), Route("api/user")]
     public class UserApiController : Controller
     {
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Models.User> Get()
         {
-            return new string[] { "user1", "user2" };
+            var users = new List<Models.User>{
+                new Models.User{ Id = 1, FirstName="Jeo", LastName="John", Gender="Male" },
+                new Models.User{ Id = 2, FirstName="Steven", LastName="Mark", Gender="Male" },
+                new Models.User{ Id = 3, FirstName="William", LastName="Henry", Gender="Male" },
+                new Models.User{ Id = 4, FirstName="Sherry", LastName="James", Gender="Female" },
+                new Models.User{ Id = 5, FirstName="Andy", LastName="Ruce", Gender="Female" }
+            };
+
+            return users;
         }
     }
 }
