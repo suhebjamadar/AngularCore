@@ -41,7 +41,6 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "dependsOn": "tscbuild",
             "presentation": {
                 "reveal": "silent"
             },
